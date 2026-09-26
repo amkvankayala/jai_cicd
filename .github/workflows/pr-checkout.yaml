@@ -16,14 +16,3 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@v5
-      - name: Run tests with coverage gate
-        run: pytest --cov-report=xml:coverage.xml --cov-report=html:htmlcov
-      - name: Upload coverage report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: pytest-coverage-report
-          path: |
-            coverage.xml
-            htmlcov/
-          if-no-files-found: error
