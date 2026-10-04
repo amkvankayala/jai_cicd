@@ -1,0 +1,1 @@
+"""Stock Insights application package."""
